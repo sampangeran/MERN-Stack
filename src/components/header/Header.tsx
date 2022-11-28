@@ -70,7 +70,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="fixed top-0 w-full font-rajdhani px-7 font-medium bg-[#0b122a] min-h-fit text-white flex items-center flex-row justify-around">
+            <div className="fixed top-0 w-full font-rajdhani px-7 py-1 font-medium bg-[#0b122a] min-h-fit text-white flex items-center flex-row justify-around">
                 <div>
                     <a href="/" className="cursor-pointer"><Image className="w-[128px] h-[72px]" src={Logo} alt="Logo"></Image></a>
                 </div>
@@ -149,7 +149,7 @@ const List = ({ data }: ListProps) => {
                                 data.submenu !== undefined &&
                                 data.submenu.map((item: { title: string, href: string }, index: number) => {
                                     return (
-                                        <div>
+                                        <div key={index}>
                                             <Submenu
                                                 key={index}
                                                 title={item.title}
