@@ -1,118 +1,189 @@
 import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
 import Image from "next/image";
 import * as Icon from "react-bootstrap-icons";
-import styles from "@/styles/Header.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const Header = () => {
-	// const [toggle, setToggle] = useState(false);
-	// const klik = () =	// }
+		const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
-	useEffect(() => {
-		require("bootstrap/dist/js/bootstrap.bundle.min.js");
-	}, []);
+    const navbarDatas = [
+        {
+            title: 'Layanan',
+            href: '/#service',
+        },
+		{
+            title: 'Kursus',
+            submenu: [
+                {
+                    title: 'Mata kuliah',
+                    href: '/courses'
+                },
+                {
+                    title: 'Mendaftar kelas',
+                    href: '/registration'
+                },
+                {
+                    title: 'Harga',
+                    href: '/pricing'
+                },
+            ]
+        },
+        {
+            title: 'Tutor',
+            href: '/tutors',
+        },
+        {
+            title: 'Event',
+            href: '/event',
+        },
+        {
+            title: 'Web-Apps',
+            submenu: [
+                {
+                    title: 'Web Calculator',
+                    href: '/web-calc'
+                },
+            ]
+        },
+        {
+            title: 'Karir',
+            href: '/career',
+        },
+		{
+            title: 'Tentang Kami',
+            href: '/about',
+        }
+    ]
 
-	return (
-		<header id={styles.header} className="w-full overflow-x-hidden">
-			<div className="d-flex justify-content-around">
-				<div className={styles.logo}>
-					<Link href="/">
-						<Image src={Logo} alt="test" />
-					</Link>
+	const bahasa = [
+		{
+			title: 'ID',
+			icon: <Image src="../../../public/assets/img/navbar/Indo.png" alt="bendera"></Image>,
+			submenu: [
+				{
+					title: 'English',
+				}
+			]
+		}
+	]
+
+    return (
+        <>
+            <div className="fixed top-0 w-full font-rajdhani px-7 py-1 font-medium bg-[#0b122a] min-h-fit text-white flex items-center flex-row justify-around">
+                <div>
+                    <a href="/" className="cursor-pointer"><Image className="w-[128px] h-[72px]" src={Logo} alt="Logo"></Image></a>
+                </div>
+                <div>
+                    <button onClick={() => setIsNavbarOpen(!isNavbarOpen)} className={`${isNavbarOpen && 'hidden'} lg:hidden hamburger`}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                    <ul className="lg:flex hidden flex-row items-center mt-0">
+                        {
+                            navbarDatas.map((data, index) => {
+                                return (
+                                    <li key={index} className="relative lg:mx-3 lg:my-0 my-3 transition duration-200 font-light">
+                                        <List data={data} />
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+				<div className="lg:flex hidden justify-center">
+					<a href="/registration" className="bg-[#5885E9] rounded-full p-3 px-[20px] text-[16px] font-cairo font-bold">Daftar Kelas</a>
 				</div>
-				<nav id="navbar" className={`d-flex ${styles.navbar}`}>
-					<ul>
-						<li>
-							<Link href="/" className={`nav-link scrollto ${styles.active}`}>
-								Beranda
-							</Link>
-						</li>
-						<li>
-							<Link className="nav-link scrollto" href="/#about">
-								Tentang Kami
-							</Link>
-						</li>
-						<li>
-							<Link className="nav-link scrollto" href="/#services">
-								Layanan
-							</Link>
-						</li>
-						<li>
-							<Link className="nav-link scrollto" href="/tutors">
-								Tutor
-							</Link>
-						</li>
-						<li>
-							<Link className="nav-link scrollto" href="/events">
-								Event
-							</Link>
-						</li>
-						<li className={styles.dropdown}>
-							<a className="nav-link scrollto" href="#">
-								<span>Kursus</span>{" "}
-								<i>
-									<Icon.ChevronDown />
-								</i>
-							</a>
-							<ul>
-								<li>
-									<Link href="/courses">Mata Kuliah</Link>
-								</li>
-								<li>
-									<Link href="/registration">Mendaftar Kelas</Link>
-								</li>
-								<li>
-									<Link href="/pricing">Harga</Link>
-								</li>
-							</ul>
-						</li>
-						<li className={styles.dropdown}>
-							<a className="nav-link scrollto" href="#">
-								<span>Apps</span>{" "}
-								<i>
-									<Icon.ChevronDown />
-								</i>
-							</a>
-							<ul>
-								<li>
-									<Link href="/che-calculator">Web Calculator</Link>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<Link className="hover:text-blue-700 transition-colors duration-500" href="/">
-								<Icon.Globe2 />
-							</Link>
-							<Link href="/careers">Karir</Link>
-						</li>
-						<li className={styles.dropdown}>
-							<a href="#">
-								<i>
-									<Icon.Globe />
-								</i>
-							</a>
-							<ul>
-								<li>
-									<Link href="/en">English</Link>
-								</li>
-								<li>
-									<Link className={styles.active} href="/">
-										Indonesia
-									</Link>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<div className={`${styles.mobileNavToggle}`}>
-						<button className="mobileNavToggle navbarMobile ">
-							<Icon.List />
-						</button>
-					</div>
-				</nav>
-			</div>
-		</header>
-	);
-};
+            </div>
+            <div className={`${isNavbarOpen ? 'block' : 'hidden'} backdrop lg:hidden absolute z-40 left-0 top-0 right-0 min-h-screen`} style={{background: 'rgba(23, 35, 46, 0.9)'}}></div>
+            <button onClick={() => setIsNavbarOpen(!isNavbarOpen)} className={`${isNavbarOpen ? 'block' : 'hidden'} lg:hidden absolute right-5 top-5 z-50 text-white`}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <ul className={`${isNavbarOpen ? 'block' : 'hidden'} lg:hidden left-3 right-3 absolute top-14 text-white bg-[#0b122a] flex flex-col mt-0 bg-red p-3 z-50 min-h-[calc(100%-70px)]`}>
+                {
+                    navbarDatas.map((data, index) => {
+                        return (
+                            <li key={index} className="relative lg:mx-3 lg:my-0 my-3 transition duration-200 font-light">
+                                <List data={data} />
+                            </li>
+                        )
+                    })
+                }
+                <div className="bg-[#5885E9] rounded-full w-1/2 mx-auto mb-3">
+                    <a href="/registration" className="flex justify-center p-3 px-[20px] text-[16px] font-cairo font-bold">Daftar Kelas</a>
+                </div>
+            </ul>
+        </>
+    );
+}
+
+interface ListProps {
+    data: any,
+}
+
+const List = ({ data }: ListProps) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div
+            onMouseOver={() => setIsOpen(true)}
+            onMouseOut={() => setIsOpen(false)}
+            className="relative mx-1 transition duration-200 font-light hover:text-blue-500">
+            {
+                Object.keys(data).includes('submenu') ?
+                    <>
+                        <div className="flex items-center justify-between">
+                            <p className="cursor-pointer">{data.title}</p>
+                            <svg onClick={() => setIsOpen(!isOpen)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-4 h-4 lg:mt-1 lg:ml-2 transition duration-200 ${isOpen && 'rotate-180'}`}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div
+                            onMouseOver={() => setIsOpen(true)}
+                            onMouseOut={() => setIsOpen(false)}
+                            className={`${isOpen ? 'lg:absolute' : 'hidden'} z-50 bg-[#0b122a] p-5 min-w-[200px] lg:-ml-5`}>
+                            {
+                                data.submenu !== undefined &&
+                                data.submenu.map((item: { title: string, href: string }, index: number) => {
+                                    return (
+                                        <div key={index}>
+                                            <Submenu
+                                                key={index}
+                                                title={item.title}
+                                                href={item.href}
+                                                isOpen={isOpen}
+                                                setIsOpen={setIsOpen}
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </>
+                    :
+                    <a href={data?.href}>{data.title}</a>
+            }
+        </div>
+    )
+}
+
+interface SubmenuProps {
+    title?: string,
+    href?: string,
+    isOpen?: boolean,
+    setIsOpen: Function
+}
+
+const Submenu = ({ title, href, isOpen, setIsOpen }: SubmenuProps) => {
+    return (
+        <div
+            className={`hover:text-blue-500 text-white transition duration-200 my-3`}>
+            <a href={href}>{title}</a>
+        </div>
+    );
+}
 
 export default Header;
