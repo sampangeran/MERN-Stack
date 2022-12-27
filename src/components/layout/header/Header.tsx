@@ -1,4 +1,4 @@
-import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
+import Logo from "../../../assets/navbar/Torche_Logo-01_White.png";
 import Image from "next/image";
 import * as Icon from "react-bootstrap-icons";
 import { useEffect, useState } from "react";
@@ -48,7 +48,7 @@ const Header = () => {
         },
         {
             title: 'Karir',
-            href: '/career',
+            href: '/careers',
         },
 		{
             title: 'Tentang Kami',
@@ -70,7 +70,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="fixed top-0 w-full font-rajdhani px-7 py-1 font-medium bg-[#0b122a] min-h-fit text-white flex items-center flex-row justify-around">
+            <div className="fixed z-50 top-0 w-full font-rajdhani px-7 py-1 font-medium bg-[#0b122a] min-h-fit text-white flex items-center flex-row justify-around">
                 <div>
                     <a href="/" className="cursor-pointer"><Image className="w-[128px] h-[72px]" src={Logo} alt="Logo"></Image></a>
                 </div>

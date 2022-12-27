@@ -1,6 +1,6 @@
 import * as Icon from "react-bootstrap-icons";
 import styles from "@/styles/Footer.module.css";
-import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
+import Logo from "../../../assets/navbar/Torche_Logo-01_White.png";
 import Image from "next/image";
 
 const Footer = () => {
