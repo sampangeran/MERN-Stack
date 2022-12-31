@@ -37,7 +37,7 @@ function TeamCard({ name, position, role, profilePic, social }: TeamCardProps) {
 export default function Teams() {
 	return (
 		<section className="py-7 mx-auto">
-			<h2 className="font-bold text-center">Meet Our Teams</h2>
+			<h2 className="font-bold text-center text-2xl">Meet Our Teams</h2>
 			<p className="text-center">Together with us, let&apos;s study from of the top experts to advance and prepare in your career in chemical engineering. Our full team.</p>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:w-[80%] mx-auto my-10">

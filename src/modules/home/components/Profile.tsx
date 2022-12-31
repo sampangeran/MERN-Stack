@@ -6,7 +6,7 @@ import qualityTutor from "@/assets/home/quality-tutor.webp";
 export default function Profile() {
 	return (
 		<div className="my-10 text-center px-3">
-			<h2 className="font-bold text-center">Ahlinya di Bidang Teknik Kimia</h2>
+			<h2 className="font-bold text-center text-2xl">Ahlinya di Bidang Teknik Kimia</h2>
 			<p className="font-light max-w-xl mx-auto">Torche Education adalah Start-Up Teknologi Pendidikan pertama yang membantu anda belajar dalam bidang teknik khususnya di bidang Teknik Kimia.</p>
 			<div className="flex flex-col lg:flex-row lg:w-[85%] mx-auto my-4 items-start justify-center">
 				<Image src={aboutImg} alt="About Image" className="lg:order-last w-[400px] lg:w-[50%]" />
