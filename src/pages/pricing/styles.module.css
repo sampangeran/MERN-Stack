@@ -1,0 +1,30 @@
+.hdg-label-popup {
+    position: absolute;
+    display: none;
+    top: -40px;
+    left: -140px;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    width: max-content;
+  }
+
+  .hdg-label-popup::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .icon:hover~.hdg-label-popup {
+    display: block
+  }
+
+  .list {
+    list-style-image: url(/src/assets/icons/search.png);
+  }
