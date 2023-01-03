@@ -15,7 +15,7 @@ function BenefitBox({ title, desc, Icon }: { title: string; desc: string; Icon: 
 export default function Tutoring() {
 	return (
 		<section className="py-16 px-3 bg-[#121d42] text-white">
-			<h2 className="font-bold text-center">Kenapa tutoring bareng Torche</h2>
+			<h2 className="font-bold text-center text-2xl">Kenapa tutoring bareng Torche</h2>
 			<p className="text-center my-6 text-sm">Tidak hanya memberikan kurikulum teknik kimia dengan kualitas terbaik, Torche juga memberikan benefit lain yang tidak diberikan oleh kompititor kami.</p>
 			<div className="flex flex-col lg:flex-row w-[80%] mx-auto gap-6 lg:gap-10">
 				{ListBenefits.map((b, index) => (

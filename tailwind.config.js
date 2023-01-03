@@ -5,6 +5,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens:{
+        'vsm': '392px',
+      },
       fontFamily: {
         cairo: ['Cairo', ...fontFamily.sans],
         rajdhani: ['Rajdhani', ...fontFamily.sans],
