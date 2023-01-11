@@ -14,10 +14,9 @@ export default function HomePage() {
       <Trusted />
       <Classes />
       <Teams />
-      <Profile />
-      <Services />
       <Tutoring />
       <Testimony />
+      <Services />
     </div>
   );
 }

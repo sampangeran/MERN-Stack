@@ -13,6 +13,7 @@ import client5 from "@/assets/home/client-5.webp";
 import client6 from "@/assets/home/client-6.webp";
 import client7 from "@/assets/home/client-7.webp";
 import client8 from "@/assets/home/client-8.webp";
+import { ListServicesProps } from "./components/Services";
 
 export const ListClasses = [
   {
@@ -65,7 +66,7 @@ export const ListClasses = [
   },
 ];
 
-export const ListServices = [
+export const ListServices: ListServicesProps[] = [
   {
     Icon: Easel2,
     title: "Lecturing Class",
