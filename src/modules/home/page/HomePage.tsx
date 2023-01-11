@@ -1,3 +1,4 @@
+import Classes from "../components/Classes";
 import HeroSection from "../components/HeroSection";
 import Profile from "../components/Profile";
 import Services from "../components/Services";
@@ -7,15 +8,16 @@ import Trusted from "../components/Trusted";
 import Tutoring from "../components/Tutoring";
 
 export default function HomePage() {
-	return (
-		<div className="mx-auto">
-			<HeroSection />
-			<Profile />
-			<Services />
-			<Tutoring />
-			<Testimony />
-			<Teams />
-			<Trusted />
-		</div>
-	);
+  return (
+    <div className="mx-auto">
+      <HeroSection />
+      <Trusted />
+      <Classes />
+      <Profile />
+      <Services />
+      <Tutoring />
+      <Testimony />
+      <Teams />
+    </div>
+  );
 }
