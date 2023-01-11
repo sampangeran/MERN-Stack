@@ -13,11 +13,11 @@ export default function HomePage() {
       <HeroSection />
       <Trusted />
       <Classes />
+      <Teams />
       <Profile />
       <Services />
       <Tutoring />
       <Testimony />
-      <Teams />
     </div>
   );
 }
