@@ -42,7 +42,7 @@ export default function Tutoring() {
       <div className="flex flex-col-reverse gap-10 justify-between lg:flex-row items-center my-10">
         <div className="lg:w-[50%] xl:flex-1">
           <svg className="w-full" viewBox="0 0 542 431" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_549_38897)">
+            <g clipPath="url(#clip0_549_38897)">
               <rect x="81.7881" y="103.782" width="460.212" height="289.368" rx="8" fill="white" />
               <rect x="289.311" y="188.028" width="113.527" height="112.329" rx="12" fill="#F3F3F3" />
               <path d="M143.859 99.0668L79.3828 90.4756L92.4308 24.4316L161.694 38.1012L143.859 99.0668Z" fill="#2F2E41" />
