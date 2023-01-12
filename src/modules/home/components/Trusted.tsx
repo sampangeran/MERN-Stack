@@ -1,24 +1,26 @@
 import Image, { StaticImageData } from "next/image";
 import { ListClients } from "../dummy-data";
+import aiche from "@/assets/home/kampus/aiche.png";
+import itb from "@/assets/home/kampus/itb.png";
+import its from "@/assets/home/kampus/its.png";
+import itera from "@/assets/home/kampus/itera.png";
+import ugm from "@/assets/home/kampus/ugm.png";
+import ui from "@/assets/home/kampus/ui.png";
+import undip from "@/assets/home/kampus/undip.png";
+import unsri from "@/assets/home/kampus/unsri.png";
 
-function ClientBox({ name, image }: { name: string; image: StaticImageData }) {
-	return (
-		<div className="bg-white flex items-center justify-center border mx-auto p-4 w-full my-auto h-[200px] overflow-hidden max-h-48">
-			<Image src={image} alt={name} />
-		</div>
-	);
-}
+const ListClientLogos = [ui, itb, its, ugm, undip, unsri, itera, aiche];
 
 export default function Trusted() {
-	return (
-		<section className="py-10 bg-[#ecf5ff] text-center px-3">
-			<h2 className="font-bold text-2xl">Trusted by Academics & Professionals</h2>
-			<p className="font-light">Dipercaya oleh mahasiswa, insinyur, praktisi dan organisasi chemical engineering dari seluruh Indonesia yang juga mencakup lingkup internasional</p>
-			<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:w-[80%] mx-auto">
-				{ListClients.map((client, index) => (
-					<ClientBox {...client} key={index} />
-				))}
-			</div>
-		</section>
-	);
+  return (
+    <section className="py-10 text-center px-10 xl:px-20">
+      <p className="text-xl font-semibold font-rajdhani">Telah Dipercaya oleh Berbagai Akademisi dan Profesional</p>
+      <div className="flex items-center gap-6 justify-between my-4 overflow-x-auto">
+        {ListClientLogos.map((logo, index) => (
+          <Image src={logo} alt="Logo kampus" key={index} />
+        ))}
+      </div>
+      <p className="font-cairo text-[#5885E9]">dan 20+ Perusahaan dan Institusi Lainnya</p>
+    </section>
+  );
 }
