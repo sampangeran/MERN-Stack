@@ -7,11 +7,17 @@ import styled from "styled-components";
 import { NextPage } from "next";
 import Link from 'next/link'
 import * as Icon from 'react-bootstrap-icons';
-import about1 from '../../../public/assets/img/Careers/about-1.webp'
-import about2 from '../../../public/assets/img/Careers/about-2.webp'
-import about3 from '../../../public/assets/img/Careers/about-3.webp'
-import about4 from '../../../public/assets/img/Careers/about-4.webp'
-import star  from '../../../public/assets/img/Careers/alotof-star.png'
+import about1 from "../../assets/Careers/about-1.webp"
+import about2 from "../../assets/Careers/about-2.webp"
+import about3 from "../../assets/Careers/about-3.webp"
+import about4 from "../../assets/Careers/about-4.webp"
+import star  from "../../assets/Careers/alotof-star.png"
+import adimas  from "../../assets/Careers/testimonials/adimas.webp"
+import renci  from "../../assets/Careers/testimonials/renci.webp"
+import wiwit  from "../../assets/Careers/testimonials/wiwit.webp"
+import joas  from "../../assets/Careers/testimonials/joas.webp"
+import feby  from "../../assets/Careers/testimonials/feby.webp"
+import hero from "../../assets/Careers/carousel-1.webp"
 
 
 // Import Swiper styles
@@ -28,21 +34,6 @@ const  CareersPage: NextPage = () =>  {
   const pagination = {
     clickable: true,
   };
-
-  const StyledDiv = styled.div`
-  &:before{
-    content: "";
-    background-color: rgba(14, 29, 52, 0.8);
-    position: absolute;
-    inset: 0;
-  }
-  `
-  const StyledCard = styled.a`
-    box-shadow: 0 0 45px rgb(0 0 0 / 8%);
-    &:hover {
-      box-shadow: none;
-    }
-  `
 
   const job = [
     {
@@ -101,49 +92,49 @@ const  CareersPage: NextPage = () =>  {
       testi: 'Mulai dari CEO dan jajarannya merangkul kami semua tanpa membedakan tanpa menyalahkan kami apabila ada kesalahan yang dilakukan selama proses magang. CEO nya mampu menciptakan hubungan dan komunikasi serta kerja sama tim yang baik dalam mencapai target perusahaan.',
       nama: 'Renci Gusri Solerena',
       jabatan: 'Legal Office Intern',
-      photo: <Image src='/assets/img/testimonials/renci.webp' alt="renci" width={100} height={100}/>
+      photo: <Image src={renci} alt="renci" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Yang aku sukai adalah tim nya, jujur aku belum ada basic sama sekali dalam legal coorporate tapi ka renci dan ka ranti ngembimbing aku, dan ka leon ga marahin ga kalo aku ga paham.',
       nama: 'Wiwit Purwoedi',
       jabatan: 'Legal Office Intern',
-      photo: <Image src='/assets/img/testimonials/wiwit.webp' alt="wiwit" width={100} height={100}/>
+      photo: <Image src={wiwit} alt="wiwit" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Beberapa hal yang aku suka dari internship di Torche itu adalah kakak – kakak di Torche sangat ramah dan juga supportive. Sistem internnya juga tidak terlalu memberatkan intern (dari yang aku rasakan di comm dev).',
       nama: 'Adimas Anugerah Rivandy',
       jabatan: 'Marketing and Sales Intern',
-      photo: <Image src='/assets/img/testimonials/adimas.webp' alt="adimas" width={100} height={100}/>
+      photo: <Image src={adimas} alt="adimas" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Selama melakukan internship selama 3 bulan terdapat beberapa hal yang disukai selama pelaksanaan intern seperti pemberian job desc yang detail, didampingi oleh head dari divisi dengan baik dan responsive apabila terdapat pertanyaan, memiliki workload yang tidak melebihi dari kontrak, dan waktu intern yang tepat waktu.',
       nama: 'Joas Kurnianto',
       jabatan: 'Business Process Development Intern',
-      photo: <Image src='/assets/img/testimonials/joas.webp' alt="joas" width={100} height={100}/>
+      photo: <Image src={joas} alt="joas" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Yang saya sukai dari program internship ini adalah lingkungannya yang sangat friendly, baik dari C-Levelnya maupun Head nya sangat friendly kepada para intern. Selain itu juga cukup open pada internnya. Selain itu sistem dan waktu pengerjaan task nya sangat flexible, sehingga tidak membebankan intern.',
       nama: 'Febby Pangestu Iskandar',
       jabatan: 'Human Resources Intern',
-      photo: <Image src='/assets/img/testimonials/feby.webp' alt="feby" width={100} height={100}/>
+      photo: <Image src={feby} alt="feby" width={100} height={100}/>
     }
   ]
 
   return (
     /* header */
     <div className='lg:w-full'>
-      <StyledDiv style={{backgroundImage: `url('/assets/img/Careers/carousel-1.webp')`}} className="w-full min-h-[300px] bg-cover bg-center bg-no-repeat relative">
+      <div className="w-full before:content-[' '] bg-[url('../assets/Careers/carousel-1.webp')] before:bg-[#0e1d34cc] before:absolute before:inset-0 min-h-[300px] bg-cover bg-center bg-no-repeat relative">
         <div className='relative flex justify-center'>
           <div className='sm:pt-[90px]'>
             <h2 className='text-[28px] sm:text-[56px] text-center font-medium text-white'>Carrers</h2>
             <p className='text-center sm:text-[16px] sm:w-[500px] md:w-[696px] lg:w-[456px] text-[#ffffffcc]'>Torche Education is open for various internship positions for students and freshgraduates to feel working environtment at startup company.</p>
           </div>
         </div>
-      </StyledDiv>
+      </div>
     
       <div className="lg:w-full bg-[#f5faff]">
         <div className='sm:ml-[40px] md:ml-[20px] xl:ml-[80px] sm:flex-col lg:flex-row lg:justify-between flex p-[15px]'>
@@ -165,11 +156,11 @@ const  CareersPage: NextPage = () =>  {
                 return (
                   <div key={index} className="p-3 grid box-border">
                     <div className=' grid'>
-                      <StyledCard key={index} href={data.link} className='p-3 font-rajdhani transition duration-300 rounded-lg no-underline border border-solid border-transparent'>
-                          <svg viewBox="0 0 80 20" >{data.icon}</svg>
+                      <a key={index} href={data.link} className='p-3 font-rajdhani transition hover:shadow-none shadow-lg hover:border hover:border-gray-300 duration-300 rounded-lg no-underline border border-solid border-transparent'>
+                          <svg viewBox="0 0 80 20" className="text-blue-600">{data.icon}</svg>
                           <h3 className='text-black font-bold text-[20px]'>{data.title}</h3>
                           <h6>{data.vacancy}</h6>
-                        </StyledCard>
+                        </a>
                     </div>
                   </div>
                 )
