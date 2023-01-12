@@ -1,18 +1,18 @@
 import { Easel2, People, PersonVideo3, Mortarboard, Pen, Book, Calendar4Week, CameraReels, ChatSquareText, Twitter, JournalAlbum, Linkedin, Instagram, Facebook } from "react-bootstrap-icons";
 
-import team1 from "@/assets/home/team-1.webp";
-import team2 from "@/assets/home/team-2.webp";
-import team3 from "@/assets/home/team-3.webp";
-import team4 from "@/assets/home/team-4.webp";
+import team1 from "@/assets/tutors/team-1.webp";
+import team2 from "@/assets/tutors/team-2.webp";
+import team3 from "@/assets/tutors/team-3.webp";
+import team4 from "@/assets/tutors/team-4.webp";
 
-import client1 from "@/assets/home/client-1.webp";
-import client2 from "@/assets/home/client-2.webp";
-import client3 from "@/assets/home/client-3.webp";
-import client4 from "@/assets/home/client-4.webp";
-import client5 from "@/assets/home/client-5.webp";
-import client6 from "@/assets/home/client-6.webp";
-import client7 from "@/assets/home/client-7.webp";
-import client8 from "@/assets/home/client-8.webp";
+// import client1 from "@/assets/home/client-1.webp";
+// import client2 from "@/assets/home/client-2.webp";
+// import client3 from "@/assets/home/client-3.webp";
+// import client4 from "@/assets/home/client-4.webp";
+// import client5 from "@/assets/home/client-5.webp";
+// import client6 from "@/assets/home/client-6.webp";
+// import client7 from "@/assets/home/client-7.webp";
+// import client8 from "@/assets/home/client-8.webp";
 import { ListServicesProps } from "./components/Services";
 
 export const ListClasses = [
@@ -120,119 +120,5 @@ export const ListBenefits = [
     icon: ChatSquareText,
     title: "After-class Consultation",
     description: "Berlaku selama 7 hari setelah kelas dengan bergabung ke server Discord kami.",
-  },
-];
-
-export const ListTeams = [
-  {
-    name: "M Yusuf Arya Ramadhan",
-    position: "CEO & CMO",
-    role: "Co-founder",
-    profilePic: team1,
-    social: [
-      {
-        Icon: Twitter,
-        url: "https://twitter.com/arya1302",
-      },
-      {
-        Icon: JournalAlbum,
-        url: "https://www.researchgate.net/profile/Muhammad-Ramadhan-27",
-      },
-      {
-        Icon: Instagram,
-        url: "https://www.instagram.com/ary.ramadhan/",
-      },
-      {
-        Icon: Linkedin,
-        url: "https://www.linkedin.com/in/arya-ramadhan/",
-      },
-    ],
-  },
-  {
-    name: "Felix Pratama",
-    position: "COO",
-    role: "Co-founder",
-    profilePic: team2,
-    social: [
-      {
-        Icon: Instagram,
-        url: "https://www.instagram.com/lixpratama/",
-      },
-      {
-        Icon: Linkedin,
-        url: "https://www.linkedin.com/in/felix-pratama-257295112/",
-      },
-    ],
-  },
-  {
-    name: "Leon Lukhas Santoso",
-    position: "CFO",
-    role: "Co-founder",
-    profilePic: team3,
-    social: [
-      {
-        Icon: Twitter,
-        url: "https://twitter.com/Leonsantoso",
-      },
-      {
-        Icon: Facebook,
-        url: "https://www.facebook.com/leon.santoso/",
-      },
-      {
-        Icon: Linkedin,
-        url: "https://www.linkedin.com/in/leon-santoso/",
-      },
-    ],
-  },
-  {
-    name: "Sendy Winata",
-    position: "CHRO",
-    role: "Co-founder",
-    profilePic: team4,
-    social: [
-      {
-        Icon: Instagram,
-        url: "https://www.instagram.com/sendywee/?hl=en",
-      },
-      {
-        Icon: Linkedin,
-        url: "https://id.linkedin.com/in/sendy-winata-941265168",
-      },
-    ],
-  },
-];
-
-export const ListClients = [
-  {
-    name: "Universitas Indonesia",
-    image: client1,
-  },
-  {
-    name: "Institut Teknologi Bandung",
-    image: client2,
-  },
-  {
-    name: "Institut Teknologi Sepuluh Nopember",
-    image: client3,
-  },
-  {
-    name: "Wageningen University",
-    image: client4,
-  },
-  {
-    name: "Badan Koordinasi Kegiatan Mahasiswa Teknik Kimia Indonesia",
-    image: client5,
-  },
-  {
-    name: "Ikatan Mahasiswa Teknik Kimia Universitas Indonesia",
-    image: client6,
-  },
-  {
-    name: "Universitas Indonesia Student Chapter",
-    image: client7,
-  },
-  {
-    name: "American Institute of Chemical Engineering Universitas Indonesia Student Chapter",
-    image: client8,
   },
 ];
