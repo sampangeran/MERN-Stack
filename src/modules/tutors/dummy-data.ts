@@ -6,15 +6,6 @@ import tutors6 from "@/assets/tutors/tutors-6.webp";
 import tutors7 from "@/assets/tutors/tutors-7.webp";
 import tutors8 from "@/assets/tutors/tutors-8.webp";
 import tutors9 from "@/assets/tutors/tutors-9.webp";
-import tutors10 from "@/assets/tutors/tutors-10.webp";
-import tutors12 from "@/assets/tutors/tutors-12.webp";
-import tutors13 from "@/assets/tutors/tutors-13.webp";
-import tutors16 from "@/assets/tutors/tutors-16.webp";
-import tutors19 from "@/assets/tutors/tutors-19.webp";
-import tutors20 from "@/assets/tutors/tutors-20.webp";
-import tutors21 from "@/assets/tutors/tutors-21.webp";
-import tutors22 from "@/assets/tutors/tutors-22.webp";
-import tutors23 from "@/assets/tutors/tutors-23.webp";
 import tutors24 from "@/assets/tutors/tutors-24.webp";
 
 export const ListTutors = [
@@ -197,5 +188,41 @@ export const ListTutors = [
         username: "",
       },
     },
+  },
+];
+
+export const ListEducations = [
+  {
+    year: "2020-2022",
+    campus: "Institut Teknologi Bandung",
+    major: "Bandung Master of Science in Chemical Engineering",
+  },
+  {
+    year: "2015-2019",
+    campus: "Universitas Indonesia",
+    major: "Bachelor of Engineering in Chemical Engineering",
+  },
+];
+
+export const ListExperience = [
+  {
+    year: "2021-Sekarang",
+    company: "Torche",
+    position: "Technology Officer",
+  },
+  {
+    year: "2022-Sekarang",
+    company: "PT. Rekayasa Industri",
+    position: "Pre-Commisioning and Commissioning EngineerPre-Commisioning and Commissioning Engineer",
+  },
+  {
+    year: "2019-2020",
+    company: "PT. Dintek Solusi Indonesia",
+    position: "Process Engineer",
+  },
+  {
+    year: "2019-2019",
+    company: "Universitas Indonesia",
+    position: "Lecturer Assistant of Petrochemical ProcessLecturer Assistant of Petrochemical Process",
   },
 ];
