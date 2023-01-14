@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { Twitter, Linkedin, Instagram, ArrowRight } from "react-bootstrap-icons";
 
 export interface TeamCardProps {
@@ -49,10 +50,12 @@ export default function TeamCard({ team }: { team: TeamCardProps }) {
           </div>
         </div>
         <button className="bg-[#5885E9] w-full font-bold text-white text-center py-4">
-          Buka Keterangan{" "}
-          <span>
-            <ArrowRight className="inline ml-3" />
-          </span>
+          <Link href="/tutors/1">
+            Buka Keterangan{" "}
+            <span>
+              <ArrowRight className="inline ml-3" />
+            </span>
+          </Link>
         </button>
       </div>
     </div>
