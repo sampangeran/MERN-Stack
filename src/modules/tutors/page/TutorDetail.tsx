@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionWrapper from "../components/SectionWrapper";
 import { ListEducations, ListExperience } from "../dummy-data";
 import ClassCard from "@/components/ClassCard";
+import Link from "next/link";
 
 function Rating() {
   return (
@@ -27,9 +28,9 @@ export default function TutorDetail() {
   return (
     <div className="mx-auto w-full py-8 lg:py-14 xl:py-20 px-5 lg:px-10 xl:px-28 bg-[#F5F7FF]">
       <div className="flex justify-between">
-        <p className="font-bold text-[#5885E9]">
+        <Link href="/tutors" className="font-bold text-[#5885E9]">
           <ArrowLeft className="inline" /> Back
-        </p>
+        </Link>
         <div className="flex justify-center items-center gap-2">
           <div className="rounded-full p-2 border border-[#5885E9]">
             <ChevronLeft size={15} color="#5885E9" />
@@ -60,7 +61,7 @@ export default function TutorDetail() {
             </div>
             <h1 className="font-rajdhani text-xl lg:text-5xl font-normal lg:font-bold text-[#151515]">Samuel Pangeran Aletheia</h1>
             <p className="text-sm lg:text-lg">M.Sc Chemical Engineering | Institut Teknologi Bandung</p>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div className="flex gap-4 flex-wrap justify-center lg:justify-start">
               <div className="flex flex-none w-full lg:w-auto items-center">
                 <p className="text-sm rounded-2xl bg-[#F3F3F3] px-2 py-1 mx-auto lg:mx-0">
                   <span>

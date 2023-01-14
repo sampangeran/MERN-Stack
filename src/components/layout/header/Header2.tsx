@@ -14,9 +14,9 @@ export default function Header2() {
     <>
       <div className={`sticky top-0 z-50  w-full ${nav ? "bg-[#F3F3F3] text-black" : "bg-[#0B122A] text-white"}`}>
         <div className="flex relative xl:px-20 lg:px-10 px-5 justify-between items-center">
-          <div>
+          <Link href="/">
             <Image src={nav ? logoTorche2 : logoTorche} priority alt="Logo torche education" height={70} />
-          </div>
+          </Link>
 
           <ul className="hidden lg:flex justify-center gap-6 items-center font-rajdhani">
             <li>
