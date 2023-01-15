@@ -41,7 +41,7 @@ export default function Services() {
 
         <div className="flex gap-2 w-full lg:w-[60%] xl:w-[55%] overflow-x-auto py-8 px-10 lg:px-4">
           {ListServices.map((service, index) => (
-            <ServiceCard data={service} />
+            <ServiceCard key={index} data={service} />
           ))}
         </div>
       </div>

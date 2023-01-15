@@ -5,7 +5,7 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      screens:{
+      screens: {
         'vsm': '392px',
       },
       fontFamily: {
@@ -19,5 +19,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms'),],
 }
