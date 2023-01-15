@@ -5,7 +5,7 @@ import { CaretLeftFill, CaretRightFill, ChevronDown, Funnel } from "react-bootst
 export default function CourseContent() {
   return (
     <main className="p-10 rounded-xl bg-white flex-1">
-      <h2 className="text-xl pb-4 border-b border-[#D8D8D8]">Semua Kursus</h2>
+      <h2 className="text-xl text-center xl:text-left pb-4 border-b border-[#D8D8D8]">Semua Kursus</h2>
 
       {/* Start filter */}
       <div className="mt-4 flex flex-col lg:flex-row justify-between items-center">
@@ -32,7 +32,7 @@ export default function CourseContent() {
           <Funnel className="inline mr-2" /> Filter Komentar
         </p>
 
-        <div className="flex gap-1 items-center">
+        <div className="hidden lg:flex gap-1 items-center">
           <CaretLeftFill color="#494949" />
           <p className="flex items-center justify-center h-8 w-8 rounded-full bg-[#5885E9] text-white text-sm">1</p>
           <p className="p-3 rounded-full text-[#5885E9] text-sm">2</p>
@@ -49,6 +49,14 @@ export default function CourseContent() {
             <ClassCard border key={index} />
           ))}
         </div>
+      </div>
+      <div className="lg:hidden justify-center flex gap-1 items-center">
+        <CaretLeftFill color="#494949" />
+        <p className="flex items-center justify-center h-8 w-8 rounded-full bg-[#5885E9] text-white text-sm">1</p>
+        <p className="p-3 rounded-full text-[#5885E9] text-sm">2</p>
+        <p className="p-3 rounded-full text-[#5885E9] text-sm">3</p>
+        <p className="p-3 rounded-full text-[#5885E9] text-sm">4</p>
+        <CaretRightFill color="#494949" />
       </div>
     </main>
   );

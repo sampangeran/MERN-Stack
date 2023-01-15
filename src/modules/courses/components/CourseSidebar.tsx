@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Search } from "react-bootstrap-icons";
+import { ListCategories } from "../dummy-data";
 
 export default function CourseSidebar() {
   const searchCourse = () => {};
   const [showCategories, setShowCategories] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState(0);
+  const handleCategories = (idx: number) => {
+    setSelectedCategory(idx);
+  };
   return (
     <aside className="p-5 rounded-xl bg-white divide-y xl:sticky h-fit xl:top-24 ">
       <div className="pb-2">
@@ -22,11 +27,11 @@ export default function CourseSidebar() {
         </div>
         {showCategories && (
           <div className="flex flex-col gap-2 text-white mt-3">
-            <p className="p-2 bg-[#5885E9] rounded-md font-bold text-sm cursor-pointer">All Course (250)</p>
-            <p className="p-2 text-[#5A5A5A] rounded-md text-sm cursor-pointer">Basic Engineering (100)</p>
-            <p className="p-2 text-[#5A5A5A] rounded-md text-sm cursor-pointer">Basic Process Engineering (50)</p>
-            <p className="p-2 text-[#5A5A5A] rounded-md text-sm cursor-pointer">Advanced Process Engineering (80)</p>
-            <p className="p-2 text-[#5A5A5A] rounded-md text-sm cursor-pointer">Master Process Engineering (20)</p>
+            {ListCategories.map((category, index) => (
+              <p key={index} className={`p-2 ${selectedCategory === index ? "bg-[#5885E9] font-bold" : "text-[#5A5A5A]"}  rounded-md text-sm cursor-pointer`} onClick={() => handleCategories(index)}>
+                {category}
+              </p>
+            ))}
           </div>
         )}
       </div>
