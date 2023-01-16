@@ -1,13 +1,15 @@
 .hdg-label-popup {
     position: absolute;
     display: none;
-    top: -40px;
-    left: -140px;
+    top: -50px;
+    left: -155px;
     background-color: black;
     padding: 5px 10px;
     border-radius: 10px;
     color: white;
     width: max-content;
+    z-index: 1000;
+
   }
 
   .hdg-label-popup::after {
@@ -19,6 +21,7 @@
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
+    z-index: 1000;
   }
   
   .icon:hover~.hdg-label-popup {
