@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       screens: {
         'vsm': '392px',
+        'xsm': '500px'
       },
       fontFamily: {
         cairo: ['Cairo', ...fontFamily.sans],
