@@ -54,7 +54,7 @@ export default function Testimony() {
       <h2 className="font-bold text-3xl px-6 text-center">Apa Kata Mereka tentang TORCHE?</h2>
       <div className="flex gap-6 overflow-x-auto py-6">
         {testi.map((item, index) => (
-          <TestCard data={item} />
+          <TestCard key={index} data={item} />
         ))}
       </div>
     </section>
