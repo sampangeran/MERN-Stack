@@ -1,13 +1,11 @@
 import TextHeroWrapper from "@/components/wrapper/TextHeroWrapper";
 import Image from "next/image";
 import image_grid from "@/assets/about/image_grid.png";
-import LabScientist from "../components/svg/LabScientist";
 import FeatureCard from "../components/FeatureCard";
 import { ListAffiliators, ListClients, ListFeature, ListMedia, ListTeams } from "../dummy-data";
 import undraw_science from "@/assets/about/undraw_science.png";
 import SectionWrapper from "@/components/wrapper/SectionWrapper";
 import TeamCard from "../components/TeamCard";
-import AchievemnetCard from "../components/AchievementCard";
 import AchievementCard from "../components/AchievementCard";
 
 export default function AboutPage() {
