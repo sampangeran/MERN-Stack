@@ -35,7 +35,7 @@ export default function Header2() {
               <Link href="/careers">Karir</Link>
             </li>
             <li>
-              <Link href="/about-us">Tentang Kami</Link>
+              <Link href="/about">Tentang Kami</Link>
             </li>
           </ul>
           <div className="lg:hidden" onClick={() => setNav(!nav)}>
@@ -92,7 +92,7 @@ export default function Header2() {
                 <Link className="text-2xl font-rajdhani" href="/careers">
                   Karir
                 </Link>
-                <Link className="text-2xl font-rajdhani" href="/about-us">
+                <Link className="text-2xl font-rajdhani" href="/about">
                   Tentang Kami
                 </Link>
               </div>
