@@ -7,6 +7,8 @@ import { ListAffiliators, ListClients, ListFeature, ListMedia, ListTeams } from 
 import undraw_science from "@/assets/about/undraw_science.png";
 import SectionWrapper from "@/components/wrapper/SectionWrapper";
 import TeamCard from "../components/TeamCard";
+import AchievemnetCard from "../components/AchievementCard";
+import AchievementCard from "../components/AchievementCard";
 
 export default function AboutPage() {
   return (
@@ -63,6 +65,14 @@ export default function AboutPage() {
         <div className="flex flex-col lg:flex-row items-center gap-8 justify-center overflow-auto my-8">
           {ListMedia.map((img, index) => (
             <Image src={img} alt="" height={55} key={index} className="object-cover" />
+          ))}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="success" title="Pencapaian Kami" desc="Berikut adalah pengalaman dan momentum yang sudah kami lalui dan menjadi sebuah sejarah">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center gap-5 my-16 border p-8 border-white/60 rounded-2xl">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <AchievementCard key={index} />
           ))}
         </div>
       </SectionWrapper>
