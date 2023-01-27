@@ -3,8 +3,10 @@ import Image from "next/image";
 import image_grid from "@/assets/about/image_grid.png";
 import LabScientist from "../components/svg/LabScientist";
 import FeatureCard from "../components/FeatureCard";
-import { ListFeature } from "../dummy-data";
+import { ListAffiliators, ListClients, ListFeature, ListMedia, ListTeams } from "../dummy-data";
 import undraw_science from "@/assets/about/undraw_science.png";
+import SectionWrapper from "@/components/wrapper/SectionWrapper";
+import TeamCard from "../components/TeamCard";
 
 export default function AboutPage() {
   return (
@@ -33,9 +35,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="">
-        <h2 className="text-4xl">Bagian dari Ekosistem Kami</h2>
-      </section>
+      <SectionWrapper title="Bagian dari Ekosistem Kami" variant="secondary">
+        <div className="rounded-2xl shadow-xl shadow-neutral-700/40 p-10 flex overflow-auto lg:flex-wrap gap-10 bg-white justify-center">
+          {ListClients.map((img, index) => (
+            <Image src={img} alt="" height={60} key={index} className="object-cover" />
+          ))}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper title="Tim Kami" desc="Mari berkenalan dengan orang-orang hebat yang menjalankan Torche Education" textLink="Lihat Selengkapnya" variant="primary">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 my-14">
+          {ListTeams.map((team, index) => (
+            <TeamCard img={team.img} name={team.name} title={team.title} key={index} />
+          ))}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper title="Affiliators" variant="secondary">
+        <div className="rounded-2xl shadow-xl shadow-neutral-700/40 p-10 flex overflow-auto lg:flex-wrap gap-10 bg-white justify-center">
+          {ListAffiliators.map((img, index) => (
+            <Image src={img} alt="" height={55} key={index} className="object-cover" />
+          ))}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper title="Seperti dilihat Di" variant="primary">
+        <div className="flex flex-col lg:flex-row items-center gap-8 justify-center overflow-auto my-8">
+          {ListMedia.map((img, index) => (
+            <Image src={img} alt="" height={55} key={index} className="object-cover" />
+          ))}
+        </div>
+      </SectionWrapper>
     </div>
   );
 }
