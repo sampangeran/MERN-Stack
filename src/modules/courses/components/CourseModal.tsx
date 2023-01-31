@@ -1,27 +1,39 @@
-import CourseModal from "@/modules/courses/components/CourseModal";
 import Image from "next/image";
 import { useState } from "react";
+import { Share, X } from "react-bootstrap-icons";
+import CourseMenuDetail from "./CourseMenuDetail";
 
-export default function ClassCard({ border }: { border?: boolean }) {
-  const [courseModal, setCourseModal] = useState(false);
-  const closeModal = () => {
-    setCourseModal(false);
+const ListMenu = ["Deskripsi", "Silabus", "Pengajar", "Detail"];
+
+export default function CourseModal({ closeModal }: { closeModal: () => void }) {
+  const [selectedMenu, setSelectedMenu] = useState(0);
+  const handleMenu = (idx: number) => {
+    if (idx === selectedMenu) return;
+    setSelectedMenu(idx);
   };
-  const handleCourseDetail = () => {
-    setCourseModal(true);
-  };
+
   return (
-    <>
-      <div className={`bg-white rounded-xl font-cairo w-full lg:w-64 xl:w-72 shadow-xl flex-none overflow-hidden border ${border ? "border-[#5885E9]" : ""}`}>
-        <div className="h-36 overflow-hidden relative">
-          <Image src="https://images.unsplash.com/photo-1671343703196-005064ab7940" className="object-cover" fill alt="Banner class" />
+    <div className="fixed left-0 right-0 top-0 bottom-0 z-50 bg-[#151515]/40 flex items-center justify-center">
+      <div className="bg-white rounded-lg w-full lg:w-[40%] h-full lg:h-auto max-w-lg overflow-hidden relative">
+        <div onClick={closeModal} className="bg-white cursor-pointer rounded-full overflow-hidden p-1 absolute z-50 top-0 right-0 m-2">
+          <X size={20} color="#000" />
         </div>
-        <div className="p-4">
-          <div className="flex gap-4">
-            <div className="rounded-2xl bg-[#F3F3F3] text-sm font-cairo px-2 py-1 flex items-center">
-              <p className="text-sm">
+        <div className="w-full h-52 overflow-hidden relative">
+          <Image alt="Course Image" src="https://images.unsplash.com/photo-1671343703196-005064ab7940" fill className="object-cover" />
+        </div>
+        <div className="p-6">
+          <div className="flex gap-3 items-center">
+            <p className="bg-[#5885E9] rounded-full font-bold text-sm text-white px-4 py-2">Daftar Kelas</p>
+            <div className="rounded-full p-2 border border-[#5885E9]">
+              <Share color="#5885E9" />
+            </div>
+          </div>
+          <div className="mt-4 flex items-center gap-3">
+            {/* Rating elements */}
+            <div className="rounded-2xl bg-[#F3F3F3] px-2 py-1 flex items-center">
+              <p className="text-xs">
                 <span>
-                  <svg className="inline" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="inline" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M15.0718 5.48261L10.5751 4.79826L8.56497 0.53081C8.51007 0.41397 8.41974 0.319385 8.30817 0.261892C8.02834 0.117233 7.6883 0.237783 7.54838 0.53081L5.53824 4.79826L1.04153 5.48261C0.917554 5.50116 0.804206 5.56236 0.717425 5.65509C0.61251 5.76801 0.554698 5.91993 0.55669 6.07746C0.558683 6.23499 0.620318 6.38525 0.728051 6.49523L3.98148 9.81682L3.21284 14.5071C3.19482 14.6162 3.20635 14.7284 3.24612 14.831C3.2859 14.9336 3.35233 15.0225 3.43789 15.0876C3.52344 15.1526 3.62469 15.1913 3.73017 15.1992C3.83564 15.2071 3.9411 15.1838 4.03461 15.1321L8.05668 12.9177L12.0787 15.1321C12.1885 15.1933 12.3161 15.2137 12.4383 15.1915C12.7464 15.1358 12.9536 14.8298 12.9005 14.5071L12.1319 9.81682L15.3853 6.49523C15.4739 6.40435 15.5323 6.28565 15.55 6.15583C15.5978 5.83128 15.3818 5.53083 15.0718 5.48261Z"
                       fill="#FFAE5F"
@@ -31,10 +43,11 @@ export default function ClassCard({ border }: { border?: boolean }) {
                 9,6/10 <span className="text-slate-500">(50)</span>
               </p>
             </div>
+            {/* Users elements */}
             <div className="flex items-center">
-              <p className="text-sm">
+              <p className="text-xs">
                 <span>
-                  <svg className="inline" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="inline" width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_549_38741)">
                       <path
                         fillRule="evenodd"
@@ -58,18 +71,18 @@ export default function ClassCard({ border }: { border?: boolean }) {
               </p>
             </div>
           </div>
-          <p className="xl:text-lg font-bold my-3">Dasar-dasar Fisika - Magnet, Listrik, & Gelombang, Optik</p>
-          <p className="text-sm font-light my-2">Basic Engineering</p>
-          <div className="w-full flex justify-center px-3">
-            <button className=" py-2 w-full text-white font-bold bg-[#5885E9] rounded-3xl">Daftar Kelas</button>
+          <h2 className="text-lg">Dasar-Dasar Fisika -Magnet, Listrik & Gelombang, Optik</h2>
+          <p className="text-sm text-[#5A5A5A]">Basic Engineering</p>
+          <div className="flex w-full gap-4 py-2 border-b border-[#A7A7A7] mt-2">
+            {ListMenu.map((menu, index) => (
+              <p key={index} className={`text-xs cursor-pointer ${index === selectedMenu ? "text-[#5885E9]" : "text-[#494949]"} `} onClick={() => handleMenu(index)}>
+                {menu}
+              </p>
+            ))}
           </div>
-          <p className="mt-2 text-sm underline underline-offset-2 font-light text-center cursor-pointer" onClick={() => handleCourseDetail()}>
-            Lihat Detail
-          </p>
+          <CourseMenuDetail menu={selectedMenu} />
         </div>
       </div>
-
-      {courseModal && <CourseModal closeModal={closeModal} />}
-    </>
+    </div>
   );
 }
