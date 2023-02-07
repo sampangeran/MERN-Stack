@@ -56,7 +56,7 @@ import xendit from "@/assets/about/affiliators/xendit.png";
 import alibaba from "@/assets/about/alibaba_cloud.png";
 import krasia from "@/assets/about/krasia.png";
 
-import { TeamCardProps } from "./components/TeamCard";
+import { TeamCardProps } from "../../components/card/AboutTeamCard";
 
 export const ListFeature = [
   {

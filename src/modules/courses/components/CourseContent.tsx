@@ -1,4 +1,4 @@
-import ClassCard from "@/components/ClassCard";
+import ClassCard from "@/components/card/ClassCard";
 import { ListClasses } from "@/modules/home/dummy-data";
 import { CaretLeftFill, CaretRightFill, ChevronDown, Funnel } from "react-bootstrap-icons";
 

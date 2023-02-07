@@ -1,4 +1,4 @@
-import TeamCard from "@/components/TeamCard";
+import TeamCard from "@/components/card/TeamCard";
 import SectionWrapper from "@/components/wrapper/SectionWrapper";
 import { ListTutors } from "@/modules/tutors/dummy-data";
 
