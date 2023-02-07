@@ -4,7 +4,7 @@ type CustomColor = {
 };
 
 export interface SectionWrapperProps {
-  title: string;
+  title?: string;
   desc?: string;
   textLink?: string;
   variant: "primary" | "secondary" | "success";

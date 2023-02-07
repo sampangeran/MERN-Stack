@@ -1,4 +1,4 @@
-import ClassCard from "@/components/ClassCard";
+import ClassCard from "@/components/card/ClassCard";
 import Image from "next/image";
 import { Card } from "react-bootstrap";
 

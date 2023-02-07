@@ -1,4 +1,4 @@
-import TeamCard from "@/components/TeamCard";
+import TeamCard from "@/components/card/TeamCard";
 import TextHeroWrapper from "@/components/wrapper/TextHeroWrapper";
 import { ListTutors } from "../dummy-data";
 

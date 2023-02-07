@@ -3,7 +3,7 @@ import profPic from "@/assets/tutors/tutors-6.webp";
 import Image from "next/image";
 import SectionWrapper from "../components/SectionWrapper";
 import { ListEducations, ListExperience } from "../dummy-data";
-import ClassCard from "@/components/ClassCard";
+import ClassCard from "@/components/card/ClassCard";
 import Link from "next/link";
 
 function Rating() {

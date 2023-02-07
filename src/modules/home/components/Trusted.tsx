@@ -1,5 +1,4 @@
-import Image, { StaticImageData } from "next/image";
-import { ListClients } from "../dummy-data";
+import Image from "next/image";
 import aiche from "@/assets/home/kampus/aiche.png";
 import itb from "@/assets/home/kampus/itb.png";
 import its from "@/assets/home/kampus/its.png";

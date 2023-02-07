@@ -5,7 +5,7 @@ import FeatureCard from "../components/FeatureCard";
 import { ListAffiliators, ListClients, ListFeature, ListMedia, ListTeams } from "../dummy-data";
 import undraw_science from "@/assets/about/undraw_science.png";
 import SectionWrapper from "@/components/wrapper/SectionWrapper";
-import TeamCard from "../components/TeamCard";
+import TeamCard from "../../../components/card/AboutTeamCard";
 import AchievementCard from "../components/AchievementCard";
 
 export default function AboutPage() {
@@ -46,7 +46,7 @@ export default function AboutPage() {
       <SectionWrapper title="Tim Kami" desc="Mari berkenalan dengan orang-orang hebat yang menjalankan Torche Education" textLink="Lihat Selengkapnya" variant="primary">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 my-14">
           {ListTeams.map((team, index) => (
-            <TeamCard img={team.img} name={team.name} title={team.title} key={index} />
+            <TeamCard img={team.img} name={team.name} title={team.title} key={index} cls="mx-auto" />
           ))}
         </div>
       </SectionWrapper>
