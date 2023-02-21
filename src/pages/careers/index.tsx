@@ -1,25 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from 'next/image'
-import HeroImage from '../../../public/assets/img/carousel-1.webp'
-import styled from "styled-components";
+import * as Icon from 'react-bootstrap-icons';
 import { NextPage } from "next";
 import Link from 'next/link'
-import * as Icon from 'react-bootstrap-icons';
 import about1 from "../../assets/Careers/about-1.webp"
 import about2 from "../../assets/Careers/about-2.webp"
 import about3 from "../../assets/Careers/about-3.webp"
 import about4 from "../../assets/Careers/about-4.webp"
 import star from "../../assets/Careers/alotof-star.png"
-import adimas from "../../assets/Careers/testimonials/adimas.webp"
-import renci from "../../assets/Careers/testimonials/renci.webp"
-import wiwit from "../../assets/Careers/testimonials/wiwit.webp"
-import joas from "../../assets/Careers/testimonials/joas.webp"
-import feby from "../../assets/Careers/testimonials/feby.webp"
-import hero from "../../assets/Careers/carousel-1.webp"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Router from "next/router";
+import { job, testi } from '../../data/careers'
 
 
 // Import Swiper styles
@@ -29,7 +22,6 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-
 
 const CareersPage: NextPage = () => {
 
@@ -41,94 +33,6 @@ const CareersPage: NextPage = () => {
     AOS.init();
   }, [])
 
-  const job = [
-    {
-      title: 'Finance',
-      icon: <Icon.CurrencyDollar />,
-      vacancy: '1',
-      link: '/careers/finance/Opening.jsx'
-    },
-    {
-      title: 'General Affairs',
-      icon: <Icon.PersonWorkspace />,
-      vacancy: '1',
-      link: '/careers/general-affair/Opening.jsx'
-    },
-    {
-      title: 'Curriculum and Education',
-      icon: <Icon.BookHalf />,
-      vacancy: '0',
-      link: '/careers/OpeningEmpty.jsx'
-    },
-    {
-      title: 'Marketing and Sales',
-      icon: <Icon.BarChartLine />,
-      vacancy: '6',
-      link: '/careers/marketing-and-sales/Opening.jsx'
-    },
-    {
-      title: 'CEO Office',
-      icon: <Icon.PersonSquare />,
-      vacancy: '0',
-      link: '/careers/OpeningEmpty.jsx'
-    },
-    {
-      title: 'Technology and Engineering',
-      icon: <Icon.Laptop />,
-      vacancy: '10',
-      link: '/careers/technology-and-engineering/Opening.jsx'
-    },
-    {
-      title: 'Human Resource',
-      icon: <Icon.PeopleFill />,
-      vacancy: '2',
-      link: '/careers/human-resource-development/Opening.jsx'
-    },
-    {
-      title: 'Tutors',
-      icon: <Icon.Book />,
-      vacancy: '0',
-      link: '/careers/tutors/Opening.jsx'
-    }
-  ]
-
-  const testi = [
-    {
-      icon: <Icon.Quote />,
-      testi: 'Mulai dari CEO dan jajarannya merangkul kami semua tanpa membedakan tanpa menyalahkan kami apabila ada kesalahan yang dilakukan selama proses magang. CEO nya mampu menciptakan hubungan dan komunikasi serta kerja sama tim yang baik dalam mencapai target perusahaan.',
-      nama: 'Renci Gusri Solerena',
-      jabatan: 'Legal Office Intern',
-      photo: <Image src={renci} alt="renci" width={100} height={100} />
-    },
-    {
-      icon: <Icon.Quote />,
-      testi: 'Yang aku sukai adalah tim nya, jujur aku belum ada basic sama sekali dalam legal coorporate tapi ka renci dan ka ranti ngembimbing aku, dan ka leon ga marahin ga kalo aku ga paham.',
-      nama: 'Wiwit Purwoedi',
-      jabatan: 'Legal Office Intern',
-      photo: <Image src={wiwit} alt="wiwit" width={100} height={100} />
-    },
-    {
-      icon: <Icon.Quote />,
-      testi: 'Beberapa hal yang aku suka dari internship di Torche itu adalah kakak – kakak di Torche sangat ramah dan juga supportive. Sistem internnya juga tidak terlalu memberatkan intern (dari yang aku rasakan di comm dev).',
-      nama: 'Adimas Anugerah Rivandy',
-      jabatan: 'Marketing and Sales Intern',
-      photo: <Image src={adimas} alt="adimas" width={100} height={100} />
-    },
-    {
-      icon: <Icon.Quote />,
-      testi: 'Selama melakukan internship selama 3 bulan terdapat beberapa hal yang disukai selama pelaksanaan intern seperti pemberian job desc yang detail, didampingi oleh head dari divisi dengan baik dan responsive apabila terdapat pertanyaan, memiliki workload yang tidak melebihi dari kontrak, dan waktu intern yang tepat waktu.',
-      nama: 'Joas Kurnianto',
-      jabatan: 'Business Process Development Intern',
-      photo: <Image src={joas} alt="joas" width={100} height={100} />
-    },
-    {
-      icon: <Icon.Quote />,
-      testi: 'Yang saya sukai dari program internship ini adalah lingkungannya yang sangat friendly, baik dari C-Levelnya maupun Head nya sangat friendly kepada para intern. Selain itu juga cukup open pada internnya. Selain itu sistem dan waktu pengerjaan task nya sangat flexible, sehingga tidak membebankan intern.',
-      nama: 'Febby Pangestu Iskandar',
-      jabatan: 'Human Resources Intern',
-      photo: <Image src={feby} alt="feby" width={100} height={100} />
-    }
-  ]
 
   return (
     /* header */
@@ -161,11 +65,12 @@ const CareersPage: NextPage = () => {
               return (
                 <div key={index} className="p-[20px] grid box-border">
                   <div className='grid'>
-                    <a key={index} href={data.link} className='p-[24px] font-rajdhani transition hover:shadow-none shadow-lg border-gray-100 hover:border hover:border-gray-300 duration-300 rounded-lg no-underline border border-solid border-transparent'>
+                    <Link key={index} href={`/careers/${data.title}`} className='p-[24px] font-rajdhani transition hover:shadow-none shadow-lg border-gray-100 hover:border hover:border-gray-300 duration-300 rounded-lg no-underline border border-solid border-transparent'>
                       <svg viewBox="0 0 80 20" className="text-[#007BFF]">{data.icon}</svg>
                       <h3 className='text-black font-bold text-[20px]'>{data.title}</h3>
+                      <input type="text" hidden value={data.title} />
                       <h6 className="text-[#007BFF] text-[16px] font-cairo mt-[10px] font-medium">{data.vacancy} Vacancy</h6>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               )
