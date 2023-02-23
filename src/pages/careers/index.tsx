@@ -65,7 +65,7 @@ const CareersPage: NextPage = () => {
               return (
                 <div key={index} className="p-[20px] grid box-border">
                   <div className='grid'>
-                    <Link key={index} href={`/careers/${data.title}`} className='p-[24px] font-rajdhani transition hover:shadow-none shadow-lg border-gray-100 hover:border hover:border-gray-300 duration-300 rounded-lg no-underline border border-solid border-transparent'>
+                    <Link key={index} href={`/careers/${data.title}`}  className='p-[24px] font-rajdhani transition hover:shadow-none shadow-[0_0_45px_rgba(0,0,0,0.08)] border-gray-100 hover:border hover:border-gray-300 duration-300 rounded-lg no-underline border border-solid border-transparent'>
                       <svg viewBox="0 0 80 20" className="text-[#007BFF]">{data.icon}</svg>
                       <h3 className='text-black font-bold text-[20px]'>{data.title}</h3>
                       <input type="text" hidden value={data.title} />
