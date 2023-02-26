@@ -15,6 +15,7 @@ const JobPage = () => {
     const titleJob = router.query.jobs
     const id = router.query.jobsList
     const [titleJobs, setTitleJobs] = useState('')
+    const [link, setLink] = useState('')
     useEffect(() => {
         AOS.init();
     }, [])
@@ -31,6 +32,7 @@ const JobPage = () => {
                 data.jobList?.filter(sub => {
                     if (sub.link === titleJob) {
                         setTitleJobs(sub.subJob)
+                        setLink(sub.kitaLulus)
                     }
                 })
             }
@@ -117,7 +119,7 @@ const JobPage = () => {
                                 <div data-aos="fade-up">
                                     <div className="my-10 font-rajdhani lg:mx-0 mx-auto lg:text-start text-center">
                                         <h4 className="text-[30px] mb-8 font-semibold">Apply For The Job</h4>
-                                        <Link className="p-2 bg-blue-500 hover:bg-blue-600 text-white font-cairo rounded-lg" href={`https://kerja.kitalulus.com/id/lowongan/detail/${titleJob}-byyz?utm_source=klep&utm_medium=klep-web&utm_campaign=klep-copy`}>Apply Now!</Link>
+                                        <Link className="p-2 bg-blue-500 hover:bg-blue-600 text-white font-cairo rounded-lg" href={`https://kerja.kitalulus.com/id/lowongan/detail/${link}-byyz?utm_source=klep&utm_medium=klep-web&utm_campaign=klep-copy`}>Apply Now!</Link>
                                     </div>
                                 </div>
                             </>

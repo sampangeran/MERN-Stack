@@ -44,6 +44,7 @@ export let job = [
                 id: 1,
                 subJob: 'Content Writer (SEO)',
                 link: 'content-writer-seo',
+                kitaLulus: 'content-writer-seo',
                 desc: [
                     {
                         id: 1,
@@ -105,6 +106,7 @@ export let job = [
                 id: 2,
                 subJob: 'Content Writer (Social Media)',
                 link: 'content-writer-socialmedia',
+                kitaLulus: 'copywritercontent-writer',
                 desc: [
                     {
                         id: 1,
@@ -166,6 +168,7 @@ export let job = [
                 id: 3,
                 subJob: 'Copy Writer',
                 link: 'Copy-Writer',
+                kitaLulus:'copy-writer',
                 desc: [
                     {
                         id: 1,
@@ -215,6 +218,7 @@ export let job = [
                 id: 4,
                 subJob: 'Content Creator',
                 link: 'Content-Creator',
+                kitaLulus: 'content-creator',
                 desc: [
                     {
                         id: 1,
@@ -268,6 +272,7 @@ export let job = [
                 id: 5,
                 subJob: 'Account Executive',
                 link: 'Account-Executive',
+                kitaLulus:'account-executive',
                 desc: [
                     {
                         id: 1,
@@ -329,6 +334,7 @@ export let job = [
                 id: 6,
                 subJob: 'Graphic Designer',
                 link: 'Graphic-Designer',
+                kitaLulus: 'graphic-design',
                 desc: [
                     {
                         id: 1,
@@ -386,6 +392,7 @@ export let job = [
                 id: 7,
                 subJob: 'Sales Executive',
                 link: 'Sales-Executive',
+                kitaLulus: 'sales-executive',
                 desc: [
                     {
                         id: 1,
@@ -431,6 +438,7 @@ export let job = [
                 id: 8,
                 subJob: 'Community Developer',
                 link: 'Community-Developer',
+                kitaLulus:'community-developer',
                 desc: [
                     {
                         id: 1,
@@ -472,6 +480,7 @@ export let job = [
                 id: 9,
                 subJob: 'Digital Marketing Executive',
                 link: 'Digital-Marketing-Executive',
+                kitaLulus:'digital-marketing-executive',
                 desc: [
                     {
                         id: 1,
@@ -529,6 +538,7 @@ export let job = [
                 id: 10,
                 subJob: 'Digital Marketing Researcher',
                 link:'Digital-Marketing-Researcher',
+                kitaLulus: 'digital-marketing-researcher',
                 desc: [
                     {
                         id: 1,
@@ -592,6 +602,7 @@ export let job = [
                 id: 1,
                 subJob: 'Business Development',
                 link: 'Business-Development',
+                kitaLulus: 'business-development',
                 desc: [
                     {
                         id: 1,
@@ -649,6 +660,7 @@ export let job = [
                 id: 2,
                 subJob: 'Digital Marketing Strategist',
                 link: 'Digital-Marketing-Strategist',
+                kitaLulus: 'digital-marketing-strategist',
                 desc: [
                     {
                         id: 1,
@@ -736,6 +748,7 @@ export let job = [
                 id: 1,
                 subJob: 'Cybersecurity',
                 link:'Cybersecurity',
+                kitaLulus: 'cybersecurity',
                 desc: [
                     {
                         id: 1,
@@ -785,6 +798,7 @@ export let job = [
                 id: 2,
                 subJob: 'Python Engineer',
                 link: 'Python-Engineer',
+                kitaLulus: 'python-engineer',
                 desc: [
                     {
                         id: 1,
@@ -834,6 +848,7 @@ export let job = [
                 id: 3,
                 subJob: 'Front-end Engineer',
                 link:'Front-end-Engineer',
+                kitaLulus: 'frontend-engineer',
                 desc: [
                     {
                         id: 1,
@@ -879,6 +894,7 @@ export let job = [
                 id: 4,
                 subJob: 'Back-end Engineer',
                 link: 'Back-end-Engineer',
+                kitaLulus: 'backend-engineer',
                 desc: [
                     {
                         id: 1,
@@ -920,6 +936,7 @@ export let job = [
                 id: 5,
                 subJob: 'Cloud Engineer',
                 link: 'Cloud-Engineer',
+                kitaLulus: 'cloud-engineer',
                 desc: [
                     {
                         id: 1,
@@ -953,6 +970,7 @@ export let job = [
                 id: 6,
                 subJob: 'UI Designer',
                 link: 'UI-Designer',
+                kitaLulus: 'ui-designer',
                 desc: [
                     {
                         id: 1,
@@ -998,6 +1016,7 @@ export let job = [
                 id: 7,
                 subJob: 'UX Designer',
                 link: 'UX-Designer',
+                kitaLulus: 'ux-designer',
                 desc: [
                     {
                         id: 1,
@@ -1043,6 +1062,7 @@ export let job = [
                 id: 8,
                 subJob: 'IT Support & Analyst',
                 link: 'IT-Support-Analyst',
+                kitaLulus: 'it-support-analyst',
                 desc: [
                     {
                         id: 1,
@@ -1088,6 +1108,7 @@ export let job = [
                 id: 9,
                 subJob: 'Data Engineer',
                 link: 'Data-Engineer',
+                kitaLulus: 'data-engineer',
                 desc: [
                     {
                         id: 1,
@@ -1143,6 +1164,7 @@ export let job = [
                 id: 1,
                 subJob: 'Training and Development',
                 link: 'Training-and-Development',
+                kitaLulus: 'training-and-development',
                 desc: [
                     {
                         id: 1,
@@ -1196,6 +1218,7 @@ export let job = [
                 id: 2,
                 subJob: 'Human Resource Development',
                 link:'Human-Resource-Development',
+                kitaLulus: 'human-resource-development',
                 desc: [
                     {
                         id: 1,
