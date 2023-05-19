@@ -23,7 +23,7 @@ import { ServiceDTO } from "@/modules/service/models/Service";
 import { Benefit } from "@/modules/service/models/Benefit";
 
 export async function getServerSideProps(){
-    const services = await fetch("https://be-torche.herokuapp.com/api/services/findAll")
+    const services = await fetch("http://18.139.3.239/api/services/findAll")
     .then((res) => res.json())
     .then((result) => {
         return result;
@@ -31,15 +31,13 @@ export async function getServerSideProps(){
         console.error(err);
     });
 
-    const benefits = await fetch("https://be-torche.herokuapp.com/api/benefits/findAll")
+    const benefits = await fetch("http://18.139.3.239/api/benefits/findAll")
     .then((res) => res.json())
     .then((result) => {
         return result;
     }).catch((err) => {
         console.error(err);
     });
-
-    // https://be-torche.herokuapp.com/api/benefits/findAll
 
     return {
         props: {
