@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type CardProps = {
   poster: StaticImageData;
@@ -27,8 +28,12 @@ const CardComponent: React.FC<CardProps> = ({poster, jenisEvent, judul, waktu, d
             <div className="text-[#151515] font-bold text-[14px] -mt-4">{waktu}</div>
             <p className="text-[#151515] text-[14px]">{deskripsi}</p>
             <div className="flex gap-4">
-              <button href={urlEvent} className="bg-[#5885E9] rounded-full p-4 px-[20px] text-[14px] font-cairo font-bold text-white w-full">Daftar Event</button>
-              <button href={urlDetail} className="bg-white rounded-full p-4 px-[20px] text-[14px] text-[#5885E9] font-cairo font-bold underline w-full border border-[#5885E9]">Lihat Detail</button>
+              <Link href={urlEvent ?? ''} className="w-full">
+                <button className="bg-[#5885E9] rounded-full p-4 px-[20px] text-[14px] font-cairo font-bold text-white w-full">Daftar Event</button>
+              </Link>
+              <Link href={urlDetail ?? ''} className="w-full">
+                <button className="bg-white rounded-full p-4 px-[20px] text-[14px] text-[#5885E9] font-cairo font-bold underline w-full border border-[#5885E9]">Lihat Detail</button>
+              </Link>
             </div>
           </div>
         </div>
