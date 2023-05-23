@@ -1,8 +1,11 @@
 import { NextPage } from 'next';
 import React from 'react';
+import EventPage from './../../modules/events/pages/index';
 
 const  EventsPage: NextPage = () =>  {
-  return <div>This is Events Page</div>;
+  return (
+    <EventPage />
+  )
 }
 
 export default EventsPage
