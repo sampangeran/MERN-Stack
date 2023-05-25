@@ -7,9 +7,11 @@ import logoTorche2 from "@/assets/img/Torche_Logo-01.png";
 import { ChevronDown } from "react-bootstrap-icons";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from 'next/router';
 
 export default function Header2() {
   const [nav, setNav] = useState(false);
+  const router = useRouter();
   return (
     <>
       <div className={`sticky top-0 z-50  w-full ${nav ? "bg-[#F3F3F3] text-black" : "bg-[#0B122A] text-white"}`}>
@@ -19,22 +21,25 @@ export default function Header2() {
           </Link>
 
           <ul className="hidden lg:flex justify-center gap-6 items-center font-rajdhani">
-            <li>
-              <Link href="/services">Layanan</Link>
+            <li className="cursor-pointer">
+              <Link href="/service">Layanan</Link>
             </li>
-            <li>
-              Kursus <ChevronDown className="inline" />
+            <li className="cursor-pointer">
+            <Link href="/courses">Kursus</Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link href="/tutors">Tutor</Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
+              <Link href="/events">Event</Link>
+            </li>
+            <li className="cursor-pointer">
               Web-Apps <ChevronDown className="inline" />
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link href="/careers">Karir</Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link href="/about">Tentang Kami</Link>
             </li>
           </ul>
@@ -66,7 +71,7 @@ export default function Header2() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <div className="bg-[#5885E9] px-3 py-2 rounded-3xl">Daftar Kelas</div>
+            <button className="bg-[#5885E9] px-3 py-2 rounded-3xl" onClick={() => router.push('/login')}>Daftar Kelas</button>
             <div className="flex items-center gap-1">
               <Image src={logoIndo} alt="Language" height={15} />
               <p>ID</p>
@@ -77,14 +82,17 @@ export default function Header2() {
           <div className="h-screen bg-[#F3F3F3] w-full absolute top">
             <div className="flex flex-col h-full px-5 py-3 relative">
               <div className="flex flex-col justify-end items-end gap-4 py-10">
-                <Link className="text-2xl font-rajdhani" href="/services">
+                <Link className="text-2xl font-rajdhani" href="/service">
                   Layanan
                 </Link>
-                <p className="text-2xl font-rajdhani">
-                  Kursus <ChevronDown className="inline" />
-                </p>
+                <Link className="text-2xl font-rajdhani" href="/courses">
+                  Kursus
+                </Link>
                 <Link className="text-2xl font-rajdhani" href="/tutors">
                   Tutor
+                </Link>
+                <Link className="text-2xl font-rajdhani" href="/events">
+                  Event
                 </Link>
                 <p className="text-2xl font-rajdhani">
                   Web-Apps <ChevronDown className="inline" />
